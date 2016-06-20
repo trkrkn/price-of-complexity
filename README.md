@@ -7,6 +7,7 @@ Cite paper:
 Battiston, S., Caldarelli, G., May, R., Roukny, T. and Stiglitz, J.E., 2015. 
 *The Price of Complexity in Financial Networks.* 
 Columbia Business School Research Paper, (15-49).
+http://papers.ssrn.com/sol3/Papers.cfm?abstract_id=2594028##
 
 Here below referred to as (Battiston et al., 2015)
 
