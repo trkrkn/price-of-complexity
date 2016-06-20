@@ -10,6 +10,11 @@ Columbia Business School Research Paper, (15-49).
 
 ## *Errors on Contract Characteristics*
 
+In this analysis, the systemic default probability is computed in a 2-banks market subject to the model introduced in (Battiston et al., 2015).  The level of accuracy of default probability is a function of parameter errors. 
+
+The code allowing to run the study is written in MATLAB and is present in the sub-folder "01_matlab/". The file named "explorer.m" is the main script. Under specific parameter setting, it will produce 
+- heat maps on the level of systemic default probability as a function of all pair of combination of parameters in the model
+- the set of *uncertainty gaps*: for each parameter, a pair of curves with the same color represents the maximum and minimum value of the default probability as a function of the deviation on each parameter around a given point
 
 
 ## *Errors on the Structure of the Contract Network*
