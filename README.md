@@ -5,7 +5,7 @@ The code in this repository allows to reproduce the figures reported in the manu
 
 Cite paper:
 Battiston, S., Caldarelli, G., May, R., Roukny, T. and Stiglitz, J.E., 2015. 
-The Price of Complexity in Financial Networks. 
+*The Price of Complexity in Financial Networks.* 
 Columbia Business School Research Paper, (15-49).
 
 Here below referred to as (Battiston et al., 2015)
