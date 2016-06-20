@@ -1,3 +1,10 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
 #ifndef _NODE_H
 #define	_NODE_H
 

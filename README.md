@@ -40,3 +40,6 @@ Given the heavy computation load due the large exploration space, the code allow
 - number of shocks
 - credit network source (file or generate)
 - derivaties network source (option)
+
+example of command: 
+./run 2 5 5 5 0.1 0.2 0 1 0 0.5 0.5 10000 0.00001 0.5 network_test_3 network_test_3

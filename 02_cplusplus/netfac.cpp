@@ -1,3 +1,11 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
+
 #include "netfac.h"
 
 Netfac::Netfac(int n_nodes, vector<Agent*> list, string network_source){

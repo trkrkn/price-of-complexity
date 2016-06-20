@@ -1,3 +1,10 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
 #include "agent.h"
 
 Agent::Agent(int id, float beta, float epsilon, float delta, float recovery, float notional, float spread, float PD_initial){
@@ -75,7 +82,6 @@ long double Agent::get_theta_PD(vector <Agent*> borrowers, vector <Agent*> cds_s
         {printf("Interbank value = %Lf\n", _beta*(1 - interbank_value) );}
     }
     
-    // theta = (-_epsilon*mu + _beta - interbank_value + _delta - derivative_value - 1)/(_epsilon * sigma);
     theta = (-_epsilon*mu + _beta*(1 - interbank_value) - derivative_value - 1)/(_epsilon * sigma);    
 
     return theta;
@@ -94,8 +100,6 @@ long double Agent::get_interbank_claims_PDs(vector <Agent*> borrowers){
 
         float weight        = 1/float(degree_out);
         inter_bank_new     += weight * (1 - borrower_PD  + _recovery * borrower_PD);
-        // if (_id == 0)
-        // {printf(" Banks degree: %d  and borrower PD : %Lf \n and weight : %f\n", degree_out, borrower_PD, weight);}
     }
 
     return inter_bank_new;
@@ -112,7 +116,6 @@ long double Agent::get_cds_claims_PDs(vector <Agent*> cds_sellers, vector <Agent
     {
         long double reference_PD = cds_reference_sellers[i]->get_PD();
         // cout << "PARAMETERS:  "<<_delta << " " << weight << " " << _notional << " " << reference_PD << " " << _recovery << " " << _spread  <<endl;
-        // self.delta * self.notional_value * (PD_reference * (1 - reference_object.recovery_rate) - self.spread * (1 - PD_reference))
         derivatives_new     += _delta * weight * _notional * (reference_PD * (1-_recovery) - _spread * (1 - reference_PD));
         // cout << "BUYS: " <<derivatives_new << endl;
     }
@@ -121,7 +124,6 @@ long double Agent::get_cds_claims_PDs(vector <Agent*> cds_sellers, vector <Agent
     {
         long double reference_PD = cds_reference_buyers[i]->get_PD();
 
-        // self.delta * self.notional_value * (- PD_reference * (1 - reference_object.recovery_rate) + self.spread * (1 - PD_reference))
         derivatives_new     += _delta * weight * _notional * (-reference_PD * (1-_recovery) + _spread * (1 - reference_PD));
         if (_id == 0)
         {cout << "PARAMETERS:  "<<_delta << " " << weight << " " << _notional << " " << reference_PD << " " << _recovery << " " << _spread  <<endl;
@@ -162,22 +164,17 @@ int Agent::compute_chi(vector <Agent*> borrowers, vector <Agent*> cds_sellers, v
 long double Agent::get_theta_states(vector <Agent*> borrowers, vector <Agent*> cds_sellers, vector <Agent*> cds_reference_sellers, vector <Agent*> cds_buyers, vector <Agent*> cds_reference_buyers, float mu, float sigma){
 
     float theta;
-    // float interbank_value   = get_interbank_claims_states(borrowers, mu, sigma);
-    // theta                   = (_beta - interbank_value - 1)/(_epsilon*sigma) - mu;
     float derivative_value  = get_cds_claims_PDs(cds_sellers, cds_reference_sellers, cds_buyers, cds_reference_buyers);
-    // theta                   = (-_epsilon*mu + _beta - interbank_value + _delta - derivative_value - 1)/(_epsilon * sigma);
 
     if (borrowers.size() == 0)
     {
         // printf("Agent: %d\n", _id);
         // cout << "no borrowers theta states"<<endl;
-        // theta = (-_epsilon*mu + _delta - derivative_value - 1)/(_epsilon * sigma);
         theta = (-_epsilon*mu - derivative_value - 1)/(_epsilon * sigma);
     }
     else
     {
         float interbank_value   = get_interbank_claims_states(borrowers, mu, sigma);
-        // theta = (-_epsilon*mu + _beta - interbank_value + _delta - derivative_value - 1)/(_epsilon * sigma);
         theta = (-_epsilon*mu + _beta - interbank_value - derivative_value - 1)/(_epsilon * sigma);
     }
 

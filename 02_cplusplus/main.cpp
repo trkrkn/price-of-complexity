@@ -1,16 +1,26 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+     Computes the probability of systemic default in a network context
+     according to the model introduced in:
+          Battiston, S., Caldarelli, G., May, R., Roukny, T. and Stiglitz, J.E., 2015. 
+          The Price of Complexity in Financial Networks. 
+          Columbia Business School Research Paper, (15-49).
+
+    
+
+ date: 15/06/2016
+*/
+
+
 #include <stdlib.h>
 #include <iostream>
-// #include <iomanip>
-// #include <fstream>
 #include <stdio.h>
 #include <string>
-// #include <sstream>
 #include <cmath>
 #include "market.h"
-// #include "agent.h"
-
-using namespace std;
-// #include <sys/stat.h>
+namespace std;
 
 // example of command:
 //  ./run 2 5 5 5 0.1 0.2 0 0.5 0.5 1 0.2 1000 0.0001 2 network_test_3
@@ -20,7 +30,7 @@ using namespace std;
 int main( int argc, char* argv[] ) {
 
     if(argc == 1){
-        cout << "please put something" << endl;
+        cout << "please provide the set of value for the parameters" << endl;
     }
     else 
     {

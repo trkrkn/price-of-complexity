@@ -1,3 +1,9 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
 
 #ifndef _MARKET_H
 #define	_MARKET_H

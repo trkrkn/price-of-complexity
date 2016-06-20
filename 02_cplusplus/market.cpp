@@ -1,7 +1,14 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
+
 #include "market.h"
 
 Market::Market(float number_agents, float epsilon, float beta, float delta, float mu, float sigma, float c, float notional, float spread, float recovery, float error_threshold, float max_iteration, float number_shocks, float PD_initial, string network_credit_source, string network_derivatives_source) {
-	// Market(number_agents, epsilon, beta, delta, mu, sigma, c, notional, spread, recovery, error_threshold, max_iteration, number_shocks, PD_initial, network_credit_source, network_derivatives_source);
 
     // printf("New MARKET\n");
     _number_agents      = (int) number_agents;
@@ -165,7 +172,6 @@ void Market::launch_simulation()
         vector <Agent*> cds_buyers, cds_reference_buyers;
         get_cds_buyers_and_reference(_banks[i], cds_buyers, cds_reference_buyers);
 
-        // _banks[i]->compute_state_return(borrowers, cds_sellers, cds_reference_sellers, cds_buyers, cds_reference_buyers, _mu, _sigma);
         int individual_bank         = _banks[i]->check_default(borrowers, cds_sellers, cds_reference_sellers, cds_buyers, cds_reference_buyers, _mu, _sigma, probability);  
 
         if (individual_bank != 1)

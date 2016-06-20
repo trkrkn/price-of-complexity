@@ -1,3 +1,11 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
+
 #include "node.h"
 
 Node::Node(int id){
@@ -92,12 +100,6 @@ vector<int> Node::get_out_neighbours_id(){
 	}
 	return out_list;
 }
-
-
-
-
-
-
 
 bool Node::is_on(){
 	return _on;

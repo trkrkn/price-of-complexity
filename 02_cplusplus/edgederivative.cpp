@@ -1,3 +1,11 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
+
 #include "edgederivative.h"
 
 EdgeDerivative::EdgeDerivative(int buyer_id, int seller_id, int reference_id){

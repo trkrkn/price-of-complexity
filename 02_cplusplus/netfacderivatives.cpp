@@ -1,3 +1,10 @@
+/*
+    Tarik Roukny
+    The Price of Complexity
+
+ date: 15/06/2016
+*/
+
 #include "netfacderivatives.h"
 
 NetfacDerivatives::NetfacDerivatives(int n_nodes, string network_source){
@@ -31,8 +38,6 @@ void NetfacDerivatives::generate_network(){
 		string line;
 
 		while(!infile.eof()){
-		// !!!!HERE - need to continue until the file is over!!!!
-  		// for (int i=0;i<3; i++){
   			std::getline(infile,line);
   			if (line.empty()){
   				break;
