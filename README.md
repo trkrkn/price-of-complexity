@@ -18,3 +18,24 @@ The code allowing to run the study is written in MATLAB and is present in the su
 
 
 ## *Errors on the Structure of the Contract Network*
+
+In this analysis, the systemic default probability is computed in a network context subject to the model introduced in (Battiston et al., 2015) and the second neighbor approximation. This allows to investigate how the systemic default probability depends on the complexity of the network of contracts.
+
+Given the heavy computation load due the large exploration space, the code allowing to run the study is written in C++ together with a set of bash command to help running the analysis on a large-scale cluster framework. The code is reported in the sub-folder "02_cplusplus/". The Makefile allows to directly compile the whole set of scripts and produces the "run" application file to be used to obtain the results. A large series of network configuration data is also provided in the "network_files/" sub-folder. A set of bash script can be used as benchmark to automatically produce large scale analysis. The main file ("main.cpp") exposes the set of parameters needed to run the analysis:
+
+- number of agents	
+- epsilon
+- beta 
+- delta
+- mu
+- sigma
+- level of correlation
+- recovery
+- initial default probabilities
+- cds notional (option)
+- cds spread (option)
+- error_threshold
+- max_iteration
+- number of shocks
+- credit network source (file or generate)
+- derivaties network source (option)
