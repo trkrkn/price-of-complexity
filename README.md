@@ -4,11 +4,11 @@ Code and synthetic data related to the study of the price of complexity in finan
 The code in this repository allows to reproduce the figures reported in the manuscript and to explore several further aspects (e.g. diffferent parameters setting, underlying network of contracts, effect of the introduction of derivative contracts).
 
 Cite paper:
-Battiston, S., Caldarelli, G., May, R., Roukny, T. and Stiglitz, J.E., 2015. 
+Battiston, S., Caldarelli, G., May, R., Roukny, T. and Stiglitz, J.E., 2016. 
 *The Price of Complexity in Financial Networks.* 
-Columbia Business School Research Paper, (15-49).
+Proceedings of the National Academy of Science.
 
-Link to the paper: http://papers.ssrn.com/sol3/Papers.cfm?abstract_id=2594028
+Link to the paper: http://www.pnas.org/content/early/2016/08/22/1521573113
 
 Here below referred to as (Battiston et al., 2015)
 
