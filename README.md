@@ -8,7 +8,7 @@ Battiston, S., Caldarelli, G., May, R., Roukny, T. and Stiglitz, J.E., 2016.
 *The Price of Complexity in Financial Networks.* 
 Proceedings of the National Academy of Science.
 
-Link to the paper: http://www.pnas.org/
+Link to the paper: http://www.pnas.org/content/early/2016/08/22/1521573113
 
 ## *Errors on Contract Characteristics*
 
